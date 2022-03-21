@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");  
+ 
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body { 
+    min-height: 100vh;  
+    font-family: "Exo", Arial, sans-serif;  
+    background-color: #fff;  
+    color: #000; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}  
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.about .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.about .text p {
+    padding: 4px;
+}
+
+.about .text .p3 span{
+    word-spacing: 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5px;
+    margin: 2px;
+    border: 0.1px solid #cccccc11;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.about h3 {
+    font-size: 32px;
+}
+
+.about .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about .social .media {
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.about .social .media:hover {
+    transform: translateY(-2px);
+    opacity: 0.5;
+}
+
+.about .social .media i {
+    padding-right: 15px;
+}
+
+.about .social .media.facebook {
+    background: #4267B2;
+}
+
+.about .social .media.tweet {
+    background: #55acee;
+}
+
+.about .social .media.pin {
+    background: #CB2027;
+}
+
+.about .social .media.share {
+    background: #95D03A;
+}
+
+.wrapper {
+    margin: 200px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); 
+    gap: 110px;  
+    counter-reset: item;  
+}
+
+.box {  
+    background-color: #fff;  
+    border-radius: 5px;  
+    height: 170px;  
+    width: 170px; 
+    --shadow: 1px 1px 1px 1px rgb(0 0 0 / 0.25);  
+    box-shadow: var(--shadow);  
+    counter-increment: item;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    cursor: pointer;
+}  
+
+.box::before {  
+    content: '#' counter(item);  
+    display: block;  
+    -webkit-background-clip: text;  
+    color: transparent;  
+    background-image: linear-gradient(115deg, #fc00ff, #00dbde);  
+    font-weight: 700;  
+    /* font-size: clamp(1.2rem, 2rem + 2vw, 3rem);   */
+}  
+
+.box:hover {    
+    text-decoration: underline;
+}
+
+.box.copy::before {  
+    content: 'Copied!';  
+}
+
+.box.copy:hover {    
+    text-decoration: none;
+}
